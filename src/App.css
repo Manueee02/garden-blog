@@ -1,38 +1,78 @@
+body {
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background-color: transparent !important;
+  width: 100%;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar .navbar-brand img {
+  max-height: 50px;
+}
+
+.slideshow {
+  width: 100%;
+  margin: 0;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #333333;
   color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer a {
+  color: #4CAF50;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-form .btn-success {
+  background-color: #4CAF50;
+  border: none;
+}
+
+.contact-form .btn-success:hover {
+  background-color: #45a049;
 }
