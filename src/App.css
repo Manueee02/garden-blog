@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 body {
   background-color: #ffffff;
   color: #333333;
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
 .App {
@@ -23,11 +26,21 @@ body {
   background-color: transparent !important;
   width: 100%;
   margin: 0;
+  margin-top: 16rem;
+  color: #f9f9f9;
 }
+
+.navbar-toggler {
+  background-color: #ffffff !important;
+  border: none;
+}
+
+
 
 .navbar .navbar-brand img {
   max-height: 50px;
 }
+
 
 .slideshow {
   width: 100%;
@@ -36,7 +49,8 @@ body {
 
 .carousel-item img {
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  height: 600px; /* Imposta l'altezza desiderata per lo slideshow */
 }
 
 .content {
@@ -76,3 +90,147 @@ body {
 .contact-form .btn-success:hover {
   background-color: #45a049;
 }
+
+.logo {
+  width: 40%;
+  margin: 20px auto;
+}
+
+/*blog card*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #56CCF2;
+background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 10%;
+  width: 20%;
+}
+
+.user__info > small {
+  color: #666;
+  float: right;
+}
+
+/*whatsapp button*/
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #384902;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  background-color: #384902;
+}
+
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 200px; /* Riduce l'altezza dello slideshow sui dispositivi mobili */
+  }
+
+  .logo img {
+    max-height: 80px; /* Riduce l'altezza del logo sui dispositivi mobili */
+  }
+  .logo{
+    width: 50%;
+  }
+
+  .content {
+    margin-top: 20px; /* Riduce il margine superiore sui dispositivi mobili */
+  }
+  .navbar{
+    margin-top: 8rem;
+  }
+}
+

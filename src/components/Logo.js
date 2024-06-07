@@ -4,7 +4,7 @@ import logo from './img/logo.png'// Assicurati di avere un'immagine del logo nel
 function Logo() {
   return (
     <div className="logo">
-      <img src={logo} alt="Logo" />
+      <img src={logo} alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
     </div>
   );
 }
