@@ -9,7 +9,8 @@ import Content from './components/Content';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Blog from './components/Blog'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   const phoneNumber = '3314669044'; // Sostituisci con il numero di telefono desiderato
@@ -35,8 +36,14 @@ function App() {
               <Slideshow />
               <Content />
               <CardBlog />
+              <Link to='/blog'>
+                  <button>
+                    Vedi altri post
+                  </button>
+              </Link>
             </>
           } />
+          <Route path='/blog' element={<Blog/>} />
         </Routes>
         <Footer />
       </div>
